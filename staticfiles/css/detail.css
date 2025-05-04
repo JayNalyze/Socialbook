@@ -1,0 +1,63 @@
+body {
+    background-image: url("{% static 'images/trees.jpg' %}"); /* Ensure the image is correctly loaded from static */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif; /* Facebook-style font */
+}
+
+.contain {
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #e4e6eb; /* Lighter border for a softer look */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly more opaque background */
+    max-width: 600px;
+}
+
+.small-stuff {
+    font-size: 18px;
+    border-radius: 12px;
+    border: 1px solid #dddfe2; /* Subtle grey border for input-like sections */
+    margin: 10px 20%;
+    padding: 10px;
+    background-color: #f7f7f7;
+}
+
+.comments {
+    text-align: left;
+    border-radius: 12px;
+    border: 1px solid #dddfe2; /* Light border */
+    padding: 20px;
+    margin: 20px 0;
+    max-height: 250px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.single-comment {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f1f2f6; /* Slightly off-white for comment background */
+    border-radius: 8px;
+}
+
+.count {
+    font-size: 22px;
+    color: #65676b; /* Darker color for better readability */
+}
+
+.comment-heading {
+    text-align: left;
+    font-size: 18px;
+    margin-left: 20px;
+    color: #1877f2; /* Facebook blue for heading */
+    font-weight: bold;
+}
+
+.comment-heading:hover {
+    text-decoration: underline; /* Hover effect for better interaction */
+}

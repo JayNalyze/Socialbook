@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="delete-post-container">
+    <h1 class="delete-post-title">Delete Post</h1>
+    <h3 class="delete-post-confirm">Are you sure you want to delete the following post?</h3>
+    <p class="delete-post-info">Title: {{ post.title }}</p>
+
+    <form method="POST" class="delete-form">
+        {% csrf_token %}
+        <button class="del-button" type="submit">
+            Yes, delete.
+        </button>
+    </form>
+
+    <a href="{% url 'profile' %}" class="cancel-link">
+        <button class="cancel-button">No</button>
+    </a>
+</div>
+{% endblock %}

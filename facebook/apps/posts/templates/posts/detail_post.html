@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="post-detail-container">
+    <h1 class="post-title">{{ post.title|title }}</h1>
+    {% if post.img %}
+        <img class="post-image" src="{{ post.img.url }}" alt="{{ post.title }}">
+    {% endif %}
+    
+    <div class="post-meta">
+        <p>Created: {{ post.created }}</p>
+        <p>Updated: {{ post.updated }}</p>
+        <p>By: <a href="{% url 'display' user_id=post.user.pk %}" class="post-author">{{ post.user }}</a></p>
+    </div>
+    
+    <div class="post-description">
+        <p>{{ post.description }}</p>
+    </div>
+
+    <!-- Like button -->
+    {% if liked %}
+        <form method="POST" action="{% url 'like' pk=post.pk destination='detail' %}">
+            {% csrf_token %}
+            <button type="submit" class="like-button">
+                <span class="like-count">{{ like_no }}</span>
+                <i class="fas fa-thumbs-up post-icon"></i>
+            </button>
+        </form>
+    {% else %}
+        <form method="POST" action="{% url 'like' pk=post.pk destination='detail' %}">
+            {% csrf_token %}
+            <button type="submit" class="like-button">
+                <span class="like-count">{{ like_no }}</span>
+            </button>
+        </form>
+    {% endif %}
+
+    <!-- Comment button -->
+    <a href="{% url 'add-comment' pk=post.pk %}">
+        <button class="comment-button">
+            <span class="comment-count">{{ num_comments }}</span>
+            <i class="fas fa-comments post-icon"></i>
+        </button>
+    </a>
+
+    <h3 class="comment-heading">Comments:</h3>
+    <div class="comments-section">
+        {% for comment in comments %}
+        <div class="single-comment">
+            <div class="comment-user"><b>{{ comment.user }}</b></div>
+            <p class="comment-time">{{ comment.commented_time }}</p>
+            <div class="comment-content">{{ comment.comment }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

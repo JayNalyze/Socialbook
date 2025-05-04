@@ -1,0 +1,155 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Container for all posts */
+.posts-container {
+    width: 80%;
+    margin: 50px auto;
+    padding-top: 40px;
+}
+
+.posts-heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Post card styles */
+.post-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Title and metadata styles */
+.post-title-link {
+    text-decoration: none;
+}
+
+.post-title {
+    font-size: 2rem;
+    color: #1877f2; /* Facebook blue */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.meta-item {
+    margin-bottom: 5px;
+}
+
+.post-author {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+.post-author:hover {
+    text-decoration: underline;
+}
+
+/* Image styling */
+.post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Description styling */
+.description {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* Like Button and Comment Button Styles */
+.like-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.like-count {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.comment-button {
+    background-color: #1877f2;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-button:hover {
+    background-color: #166fe5; /* Darker Facebook blue on hover */
+}
+
+.comment-icon {
+    margin-right: 8px;
+}
+
+/* Post Actions (Comment Button) */
+.post-actions {
+    text-align: right;
+}
+
+.comment-link {
+    text-decoration: none;
+}
+
+/* Responsive Styles for Smaller Devices */
+@media screen and (max-width: 768px) {
+    .posts-container {
+        width: 95%;
+    }
+
+    .post-card {
+        padding: 15px;
+    }
+
+    .post-title {
+        font-size: 1.8rem;
+    }
+
+    .post-meta {
+        font-size: 0.9rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .comment-button {
+        width: 100%;
+    }
+}

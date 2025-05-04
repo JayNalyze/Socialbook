@@ -1,0 +1,130 @@
+/* Global Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f6f9; /* Light grey background */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Container for the page */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+/* Heading for the page */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Styling for each post */
+.display-posts {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add hover effect for the posts */
+.display-posts:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styling */
+.display-posts h3 {
+    font-size: 2rem;
+    color: #1877f2; /* Facebook blue */
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Metadata styling for posts */
+.display-posts p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.display-posts p a {
+    color: #1877f2; /* Facebook blue */
+    text-decoration: none;
+}
+
+.display-posts p a:hover {
+    text-decoration: underline;
+}
+
+/* Description styling for each post */
+.display-posts .description {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Image styling for each post */
+.display-posts img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Buttons and interactions */
+button {
+    background-color: #1877f2;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%; /* Button takes full width */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #166fe5; /* Darker Facebook blue on hover */
+}
+
+button:active {
+    background-color: #145db4; /* Even darker blue when clicked */
+}
+
+/* Icon styling inside the buttons */
+button .post-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Take up more space on smaller screens */
+    }
+
+    .display-posts {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .display-posts h3 {
+        font-size: 1.8rem;
+    }
+}

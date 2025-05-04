@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/forms.css' %}">
+{% endblock %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<style type="text/css">
+    .asteriskField {
+        display: none;
+    }
+
+    /* Additional styling to make the form look like a Facebook-like UI */
+    .container {
+        width: 60%;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    form legend {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #1877f2; /* Facebook Blue */
+        margin-bottom: 20px;
+    }
+
+    form label {
+        font-size: 1.2rem;
+        color: #333;
+        text-align: left;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    form input,
+    form textarea {
+        width: 80%;
+        padding: 12px 20px;
+        font-size: 1rem;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #dddfe2;
+    }
+
+    form textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    form button {
+        background-color: #1877f2;
+        color: white;
+        font-size: 1.2rem;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+        background-color: #166fe5; /* Darker Facebook Blue */
+    }
+
+    .container .go-back {
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
+    .container .go-back a {
+        color: #1877f2;
+        text-decoration: none;
+    }
+
+    .container .go-back a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        <legend>Update Post</legend>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="Submit">Update</button>
+    </form>
+
+    <div class="go-back">
+        <a href="{% url 'display-posts' %}">Go back to Posts</a>
+    </div>
+</div>
+{% endblock %}

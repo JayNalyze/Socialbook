@@ -1,0 +1,115 @@
+{% load static %}
+
+{% block head %}
+    <style>
+        /* Styles for login page */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('{% static "images/login.jpg" %}') no-repeat center center/cover;
+            background-size: cover;
+        }
+
+        .wrapper {
+            position: relative;
+            max-width: 470px;
+            width: 100%;
+            border-radius: 12px;
+            padding: 40px 30px;
+            background: #3eb7fd;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .form.login {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .form.login header {
+            font-size: 30px;
+            color: #333;
+            opacity: 0.6;
+            text-align: center;
+        }
+
+        .form input[type="text"],
+        .form input[type="password"] {
+            height: 50px;
+            outline: none;
+            border: 1px solid #aaa;
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #333;
+            border-radius: 8px;
+            background: #fff;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .form a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .form input[type="submit"] {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            background: #4070f4;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        .form input[type="submit"]:hover {
+            background: #166fe5;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .wrapper {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="login-page">
+    <section class="wrapper">
+        <!-- Login Form -->
+        <div class="form login">
+            <header>Login</header>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Email address" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <a href="#" style="color: #333; text-decoration: none;">Forgot password?</a>
+                <input type="submit" value="Login">
+            </form>
+            <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+        </div>
+    </section>
+</div>
+{% endblock %}
