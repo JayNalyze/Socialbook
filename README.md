@@ -9,7 +9,7 @@
 - 💬 Comment on Photos
 - 👤 User Profile Pages
 - 🕵️‍♀️ Explore Posts by Others
-- ⚙️ Admin Panel for Moderation
+
 ---
 
 ## 🛠️ Technologies Used
