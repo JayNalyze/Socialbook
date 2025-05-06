@@ -44,7 +44,8 @@ Logged-in users can create new posts with text content (optionally with an image
 
 
 Posts are displayed in a feed with timestamps and user information.
-![New post ](https://github.com/user-attachments/assets/d698c0f5-2bb9-4604-b91a-fc53667b1657)
+![All post feed](https://github.com/user-attachments/assets/ebb125d8-6b8b-4df2-9389-c9ea1e637d2f)
+
 
 
 **✏️ Edit Profile Details**
