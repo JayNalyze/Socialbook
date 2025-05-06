@@ -61,7 +61,7 @@ Changes are instantly reflected across the app.
 ![Edit profile](https://github.com/user-attachments/assets/5fb79bd8-414c-47cc-9ca9-e97f32de5459)
 
 
-** 👥 Group Details**
+**👥 Group Details**
 -- Group 06
 01. Frontend - IMESHIKA K.A.C(216051P)
 02. Backend  - JAYATHISSA W.A.G.J.U.N(216057N) , RANAWEERA R.P.N.L(216104H)
