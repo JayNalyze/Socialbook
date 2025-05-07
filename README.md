@@ -58,7 +58,8 @@ Changes are instantly reflected across the app.
 ![Edit profile](https://github.com/user-attachments/assets/7b1093de-d7da-4cae-a47e-b9d86f589944)
 
 **Profile view**
-![Edit profile](https://github.com/user-attachments/assets/5fb79bd8-414c-47cc-9ca9-e97f32de5459)
+![profile view](https://github.com/user-attachments/assets/04f7d210-bec5-4866-9bb7-11f755ea7d49)
+
 
 
 **👥 Group Details**
